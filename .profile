@@ -1,3 +1,8 @@
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
 if [ "$(echo $PATH | grep 'opt/local')" == "" ]; then
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 fi
@@ -16,9 +21,9 @@ export CLICOLOR=1
 export HISTCONTROL=ignoredups
 export HISTSIZE=5000
 export HISTFILESIZE=5000
-shopt -s histappend
-if [ "$(echo $PROMPT_COMMAND | grep 'history')" == "" ]; then
-    export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#shopt -s histappend
+if [ "$(echo $PROMPT_COMMAND | grep 'tmux')" == "" ]; then
+#    export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
     export PROMPT_COMMAND="tmux has-session -t 0 > /dev/null 2>&1 && tmux refresh-client -S; $PROMPT_COMMAND"
 fi
 
