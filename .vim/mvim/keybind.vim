@@ -32,3 +32,4 @@ map <F4> "+p
 "comment current line
 nmap \ :s/^/#/ <CR> :noh <CR>
 "nmap <C-w> i<C-w><Esc>
+vmap f :!python -mjson.tool <CR>

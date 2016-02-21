@@ -18,6 +18,9 @@ set clipboard=unnamed
 "set clipboard=unnamedplus
 "colorscheme torte
 let g:pyflakes_use_quickfix = 0
+set list
+"set listchars=tab:▸\ ,eol:¬,trail:·
+set listchars=tab:▸\ ,trail:·,extends:«,precedes:»
 
 exec 'source ~/.vim/mvim/misc.vim'
 exec 'source ~/.vim/mvim/colorscheme.vim'

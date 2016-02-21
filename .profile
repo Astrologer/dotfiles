@@ -12,7 +12,7 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
 fi
 
 # Appearance 
-export TERM=xterm-16color
+export TERM=xterm-256color
 export PS1="\[\e[00;36m\][\u@\h \W]$\[\e[00m\] "
 export CLICOLOR=1
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
