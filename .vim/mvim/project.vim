@@ -1,5 +1,6 @@
 let s:projects_config = { 
-\ 'pipeline-ingest':            '/opt/origami/pipeline-ingest/src/', 
+\ 'app-prototype':              '/opt/origami/app-prototype/src/',
+\ 'pipeline-ingest':            '/opt/origami/pipeline-ingest/src/',
 \ 'connector-api-python':       '/opt/origami/connector-api-python/origami/',
 \ 'connector-pipeline-python':  '/opt/origami/connector-pipeline-python/origami/',
 \ 'connector-common-python':    '/opt/origami/connector-pipeline-python/origami/',
@@ -55,7 +56,7 @@ function! ProjSwitch2()
     file Projects
 
     let main = @%
- 
+
     setlocal buftype=nofile
     setlocal noswapfile
     resize 5
@@ -90,5 +91,11 @@ endfunction
 function! ProjLaunch()
     let command = '!DJANGO_SETTINGS_MODULE=origami.settings
                 \  PYTHONPATH='.g:project_path.' python %'
+    execute command
+endfunction
+
+function! ProjLaunchTest()
+    let command = '!DJANGO_SETTINGS_MODULE=origami.settings
+                \  PYTHONPATH='.g:project_path.' python -m unittest '.expand('%:r')
     execute command
 endfunction

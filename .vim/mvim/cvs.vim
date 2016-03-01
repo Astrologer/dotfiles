@@ -32,7 +32,7 @@ endfunction
 
 function! GitAnnotate()
     if exists('s:gapos')
-        call GitUnDo()
+        call s:GitUnDo()
         let s:gfile = '%'
         let s:grev = ''
     else
@@ -52,7 +52,7 @@ function! GitNext()
             let s:gfile = s:groot.line[1]
         endif
 
-        call GitUnDo()
+        call s:GitUnDo()
         silent call GitAnnotate()
     endif
 endfunction

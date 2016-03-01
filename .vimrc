@@ -10,7 +10,7 @@ set nowrap
 set expandtab
 "set tags=tags,../tags
 set shiftwidth=4
-set foldmethod=marker
+"set foldmethod=marker
 set foldmethod=indent
 set nofoldenable
 set number
@@ -39,6 +39,7 @@ map <F2> :IPython --existing vim.json<CR>
 map <F5> :call GitAnnotate()<CR>
 map <F6> :call GitNext()<CR>
 
-map Z :call ProjLaunch()<CR>
+map Zt :call ProjLaunchTest()<CR>
+map Zs :call ProjLaunch()<CR>
 "map <F9> :let [g:project, g:project_path, &tags] = ProjSwitch()<CR>
 map <silent> <F9> :call ProjSwitch2()<CR>

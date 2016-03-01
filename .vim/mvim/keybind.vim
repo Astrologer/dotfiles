@@ -12,24 +12,26 @@ map <F11> :%s/\s*$// <CR>
 "map # :e ++enc=2byte-utf-8 <CR> :echo &fenc <CR>
 
 map ` :noh <CR>
+"map . zr
+"map , zm
 map <TAB> za
 
 "Autocomplition by Shift + Tab
 imap <S-Tab> <C-n>
 "move curson to string start/end
-nmap <C-e> $
+"nmap <C-e> $
 imap <C-e> <Esc>A
-nmap <C-a> ^
+"nmap <C-a> ^
 imap <C-a> <Esc>I
 
 "multiline comment
 vmap a :s/^\([^#]\)/#\1/ <CR> :noh <CR>
 vmap q :s/^#// <CR> :noh <CR>
+"comment current line
+nmap \ :s/^/#/ <CR> :noh <CR>
 
 "xterm clipboard
 vmap <F3> "+y
 map <F4> "+p
-"comment current line
-nmap \ :s/^/#/ <CR> :noh <CR>
 "nmap <C-w> i<C-w><Esc>
 vmap f :!python -mjson.tool <CR>
