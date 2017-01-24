@@ -11,7 +11,7 @@ map <F11> :%s/\s*$// <CR>
 "map @ :e ++enc=cp1251 <CR> :echo &fenc <CR>
 "map # :e ++enc=2byte-utf-8 <CR> :echo &fenc <CR>
 
-map ` :noh <CR>
+map = :noh <CR>
 "map . zr
 "map , zm
 map <TAB> za

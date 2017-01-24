@@ -4,7 +4,7 @@ if [ -f /etc/profile ]; then
 fi
 
 if [ "$(echo $PATH | grep 'opt/local')" == "" ]; then
-    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+    export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 fi
 
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
@@ -12,7 +12,7 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
 fi
 
 # Appearance 
-export TERM=xterm-256color
+export TERM=screen-256color
 export PS1="\[\e[00;36m\][\u@\h \W]$\[\e[00m\] "
 export CLICOLOR=1
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -32,3 +32,4 @@ alias ll="ls -l"
 alias rm="rm -i"
 alias grep="grep --color=auto"
 alias mysql="mysql5 -u root --default-character-set=utf8"
+alias ldd="otool -L"
