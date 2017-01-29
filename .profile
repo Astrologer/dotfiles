@@ -13,6 +13,9 @@ fi
 
 # Appearance 
 export TERM=screen-256color
+# hightlight serch in man/less
+export LESS_TERMCAP_so=$'\E[30;47m'
+export LESS_TERMCAP_se=$'\E[39;49m'
 export PS1="\[\e[00;36m\][\u@\h \W]$\[\e[00m\] "
 export CLICOLOR=1
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
