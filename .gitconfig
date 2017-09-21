@@ -1,0 +1,9 @@
+[user]
+    name = <name>
+    email = <email>
+[push]
+    default = simple
+[alias]
+    cdiff = diff --color-words --word-diff-regex='.'
+    wdiff = diff --color-words --word-diff-regex='.|\\w+'
+    root = !pwd
