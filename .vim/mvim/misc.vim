@@ -11,7 +11,6 @@ if has("terminfo")
 endif
 
 filetype indent plugin on
-au BufRead,BufNewFile *.scala set syntax=scala
 
 augroup resCur
     autocmd!

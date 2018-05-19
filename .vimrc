@@ -40,6 +40,7 @@ map <F2> :IPython --existing vim.json<CR>
 map <F5> :call GitAnnotate()<CR>
 map <F6> :call GitNext()<CR>
 map <leader>a :call GitBlame()<CR>
+map <leader>o :call FilesTree()<CR>
 
 map Zt :call ProjLaunchTest()<CR>
 map Zs :call ProjLaunch()<CR>

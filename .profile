@@ -11,7 +11,7 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
-# Appearance 
+# Appearance
 export TERM=screen-256color
 # hightlight serch in man/less
 export LESS_TERMCAP_so=$'\E[30;47m'
@@ -36,3 +36,6 @@ alias rm="rm -i"
 alias grep="grep --color=auto"
 alias mysql="mysql5 -u root --default-character-set=utf8"
 alias ldd="otool -L"
+alias aws="aws-2.7"
+
+complete -C /opt/local/bin/aws_completer-2.7 aws

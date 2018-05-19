@@ -1,6 +1,6 @@
 [user]
-    name = <name>
-    email = <email>
+    email = my@email.com
+    name = Denis
 [push]
     default = simple
 [alias]
