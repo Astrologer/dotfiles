@@ -34,6 +34,7 @@ let [g:project_path, g:project] = GetGitProject()
 let [g:project, g:project_path, &tags] = ProjGet(g:project, g:project_path)
 let g:git_branch = GetGitBranch()
 call SetStatusLine()
+cd `=g:project_path`
 
 "some development integration
 map <F2> :IPython --existing vim.json<CR>

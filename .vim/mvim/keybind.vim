@@ -35,3 +35,12 @@ vmap <F3> "+y
 map <F4> "+p
 "nmap <C-w> i<C-w><Esc>
 vmap f :!python -mjson.tool <CR>
+
+"map <leader>s :execute "vimgrep /\\<" . expand("<cword>") . "\\>/j **/*.scala" <Bar> cw<CR>
+map <leader>s :execute "silent grep! -I -r"
+            \ " --exclude-dir target"
+            \ " --exclude-dir .git"
+            \ " --include *" . expand("%:e")
+            \ . " \"\\<" . expand("<cword>"). "\\>\" *"
+            \ <Bar> copen
+            \ <Bar> :redraw! <CR>
