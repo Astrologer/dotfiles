@@ -40,7 +40,7 @@ vmap f :!python -mjson.tool <CR>
 map <leader>s :execute "silent grep! -I -r"
             \ " --exclude-dir target"
             \ " --exclude-dir .git"
-            \ " --include *" . expand("%:e")
+            \ " --include *." . expand("%:e")
             \ . " \"\\<" . expand("<cword>"). "\\>\" *"
             \ <Bar> copen
             \ <Bar> :redraw! <CR>
