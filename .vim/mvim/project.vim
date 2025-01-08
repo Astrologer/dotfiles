@@ -106,5 +106,10 @@ function! FilesTree()
     let g:netrw_banner = 0
     let g:netrw_liststyle = 3
     let g:netrw_browse_split = 4
+    let g:netrw_list_hide = '\..*'
+    let g:file_path = expand('%:p:h')
+
     :20Vex
+    setlocal statusline=%{g:file_path}
+    nnoremap <silent> <buffer> 1 :q<CR>
 endfunction

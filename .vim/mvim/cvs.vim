@@ -71,6 +71,7 @@ function! GitBlame()
     setlocal buftype=nofile
     setlocal noswapfile
     setlocal hidden
+    setlocal cursorline
     let &syntax = l:file_syntax
 
     let b:file_buffer = l:file_buffer
@@ -84,6 +85,7 @@ function! GitBlame()
     map <silent> <buffer> d :call GitNextRev()<CR>
 
     exe b:git_root
+
     call setpos('.', l:file_pos)
 endfunction
 

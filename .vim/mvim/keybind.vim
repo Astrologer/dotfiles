@@ -11,7 +11,7 @@ map <F11> :%s/\s*$// <CR>
 "map @ :e ++enc=cp1251 <CR> :echo &fenc <CR>
 "map # :e ++enc=2byte-utf-8 <CR> :echo &fenc <CR>
 
-map = :noh <CR>
+map <leader>= :noh <CR>
 "map . zr
 "map , zm
 map <TAB> za
@@ -28,7 +28,7 @@ imap <C-a> <Esc>I
 vmap a :s/^\([^#]\)/#\1/ <CR> :noh <CR>
 vmap q :s/^#// <CR> :noh <CR>
 "comment current line
-nmap \ :s/^/#/ <CR> :noh <CR>
+"nmap \ :s/^/#/ <CR> :noh <CR>
 
 "xterm clipboard
 vmap <F3> "+y

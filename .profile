@@ -9,11 +9,15 @@ if [ "$(echo $PATH | grep 'opt/local')" == "" ]; then
 fi
 
 # Autocomplete
-if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-    . /opt/local/etc/profile.d/bash_completion.sh
+HOMEBREW_PREFIX="$(brew --prefix)"
+if [ -f "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 fi
-complete -C /opt/local/bin/aws_completer-2.7 aws
 
+#if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+#    . /opt/local/etc/profile.d/bash_completion.sh
+#fi
+#complete -C /opt/local/bin/aws_completer-2.7 aws
 
 # Appearance
 export TERM=screen-256color
@@ -66,3 +70,11 @@ alias grep="grep --color=auto"
 alias mysql="mysql5 -u root --default-character-set=utf8"
 alias ldd="otool -L"
 alias aws="aws-2.7"
+
+function jvm17 {
+    export JAVA_HOME=`/usr/libexec/java_home -v 17`
+}
+
+function jvm21 {
+    export JAVA_HOME=`/usr/libexec/java_home -v 21`
+}
